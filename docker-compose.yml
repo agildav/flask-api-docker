@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  web:
+    tty: true
+    stdin_open: true
+    image: flask_api
+    container_name: flask_api
+    build: .
+    volumes:
+      - .:/flask
+    ports:
+      - 5000:5000
